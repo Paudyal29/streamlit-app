@@ -62,7 +62,7 @@ def calculate_range(start, end, capacity):
         'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN6a3RjcHVsYW10dnFrZ3hhb2RhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI2NzI0MTgsImV4cCI6MjA1ODI0ODQxOH0.F6DN2ox5w50xosTPgUHGqAEO9PqBOyCMQs5__pETQK0',
         'Content-Type': 'application/json'
     }
-    payload = {"start": start, "end": end, "remaining_capacity": capacity}
+    payload = {"start": start, "end": end, "remaining_capacity": capacity, "MASS":"1720","EFFI":"0.1012"}
     resp = requests.post(url, json=payload, headers=headers)
     resp.raise_for_status()
     return resp.json()
